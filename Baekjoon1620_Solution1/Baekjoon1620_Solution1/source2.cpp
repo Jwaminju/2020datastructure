@@ -1,12 +1,15 @@
 #include<iostream>
 #include<unordered_map>
-#include <time.h>
+//#include <time.h>
 using namespace std;
 
 int main() {
-	clock_t start, end; 
-	double result;
-	start = clock();
+	cin.tie(NULL);
+	cin.sync_with_stdio(false);
+
+	//clock_t start, end; 
+	//double result;
+	//start = clock();
 	int n, m, index;
 	char name[21];
 	char quiz[21];
@@ -15,8 +18,6 @@ int main() {
 
 	cin >> n;
 	cin >> m;
-	if (n < 1 && n > 100000 || m < 1 && m > 100000)
-		return 0;
 
 	for (int i = 0; i < n; i++) {
 		cin >> name;
@@ -28,15 +29,15 @@ int main() {
 		cin >> quiz;
 		if (quiz[0] >= '0' && quiz[0] <= '9') {
 			index = atoi(quiz) - 1;
-			cout << pkmonum[index] << endl;
+			cout << pkmonum[index] << '\n';
 		}
 		else {
-			cout << pkmon[quiz] << endl;
+			cout << pkmon[quiz] << '\n';
 		}
 	}
 
-	end = clock(); 
-	result = (double)(end - start);
-	cout << "result : " << result << " microseconds" << endl;
+//	end = clock(); 
+//	result = (double)(end - start);
+//	cout << "result : " << result << " microseconds" << '\n';
 	return 0;
 }
