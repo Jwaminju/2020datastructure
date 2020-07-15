@@ -22,7 +22,7 @@ int main() {
 		map.push_back(name);
 		pkmon.insert({ name, i + 1 });			// make_pair
 	}
-
+	//test
 	for (int j = 0; j < m; j++) {
 		cin >> quiz;
 		if (isdigit(quiz[0])) {
